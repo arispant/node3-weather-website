@@ -18,8 +18,7 @@ document.querySelector('#get-location').addEventListener('click', (e) => {
           return response.json()
         })
         .then((data) => {
-            console.log(data)
-            search.value = data.features[0].properties.address
+          search.value = data.features[0].properties.address
         }) 
     })
 })

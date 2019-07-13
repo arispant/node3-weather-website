@@ -26,23 +26,27 @@ app.use(express.static(publicDirectory))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
-        name: 'Aris Pant'
+        name: 'Aris Pantelakis'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About me',
-        name: 'Aris Pant'
+        name: 'Aris Pantelakis'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        message: 'What can i do for you?',
+        message: 'What can i do for you? Please feel free to contact me with the form below!',
         title: 'Help',
-        name: 'Aris Pant'
+        name: 'Aris Pantelakis'
     })
+})
+
+app.post('/help', (req, res) => {
+    res.send('Sorry! This service is not currently available!')
 })
 
 // app.com/weather
